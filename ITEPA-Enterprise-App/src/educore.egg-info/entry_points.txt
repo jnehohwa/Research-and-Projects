@@ -1,0 +1,2 @@
+[console_scripts]
+educore-demo = educore.demo:main

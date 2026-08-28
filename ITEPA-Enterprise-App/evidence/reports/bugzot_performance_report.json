@@ -1,0 +1,21 @@
+{
+  "total_events": 16,
+  "successful_transactions": 10,
+  "failed_transactions": 6,
+  "success_rate_percent": 62.5,
+  "average_duration_ms": 0.2301,
+  "minimum_duration_ms": 0.0067,
+  "maximum_duration_ms": 0.6481,
+  "p95_duration_ms": 0.6481,
+  "throughput_transactions_per_second": 12996.51,
+  "events_by_type": {
+    "course_capacity_violation": 5,
+    "duplicate_registration": 1,
+    "registration_success": 10
+  },
+  "outcomes": {
+    "confirmed": 10,
+    "rejected_capacity": 5,
+    "rejected_duplicate": 1
+  }
+}

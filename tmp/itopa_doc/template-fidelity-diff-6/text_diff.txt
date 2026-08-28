@@ -1,0 +1,141 @@
+--- a
++++ b
+@@ -1,14 +1,21 @@
+ Eduvos Assessment Coversheet
+ Academic Details
+ Campus:
++Mowbray
+ Faculty:
++Information Technology
+ Module Code:
++ITOPA3-33
+ Lecturer’s Name:
++Bongani Mahlangu
+ Group (if applicable)
++N/A - Individual assignment
+ Assessment Details
+ Assessment Type:
++Assignment
+ Assignment/Brief Number:
+ Due Date/ Submission Date:
++Friday, 28 August 2026 at 23:59
+ Student Details (Group, if applicable)
+ #
+ Full Name
+@@ -24,7 +31,9 @@
+ 6
+ Student Details (Individual, if applicable)
+ Student Full Name:
++Joshua Nehohwa
+ Student Number:
++EDUV4948467
+ Academic Integrity
+ AI Disclosure Completed
+ Yes
+@@ -39,22 +48,95 @@
+ Lecturer Signature:
+ Date:
+ Assessment
+-[This section is reserved for your assessment submission content]
++Working response framework - Questions 1 and 2
++Status and authorship note
++This document contains source-backed planning notes and writing checkpoints. Convert every point into your own explanation, add your own examples and transitions, and verify it against the course material before submission.
++Suggested writing target: approximately 500-650 words for Question 1 and 650-800 words for Question 2. The brief provides marks but no word count, so clarity and mark coverage take priority.
++Question 1 - Operating-system system calls (20 marks)
++1.1 File-management calls and their importance (8 marks)
++Writing task: explain the request as a controlled sequence from the banking application to the OS, not merely as a list of function names.
++Locate/open: the application supplies the statement path; the OS resolves the directory path, checks the customer/process permissions, creates an open-file description and returns a protected handle or file descriptor.
++Read: the application requests statement bytes through the descriptor; the OS coordinates the file system, cache/buffers, storage driver and hardware, then copies authorised data into application memory.
++Seek or metadata lookup where needed: the OS can obtain file size, timestamps or a required offset before reading the relevant statement content.
++Write/spool only if the statement is exported or printed: the OS controls output buffering, printer queues and device-driver communication.
++Close: the descriptor/handle is released after display or printing, allowing the OS to reclaim per-process resources and complete pending I/O safely.
++Importance to emphasise: abstraction from device-specific commands, authentication and access control, consistent error reporting, safe sharing/concurrency, auditing, caching and reliable resource cleanup.
++Course anchors: Week 1 slides 41, 43, 49 and 59-60; Week 2 slide 27. External verification: POSIX open(), read() and close() interfaces.
++Student checkpoint: add one sentence showing how each call protects the confidentiality and integrity of a customer statement.
++1.2 Consequences of bypassing the OS (6 marks)
++Build the analysis around consequences and trade-offs. Acknowledge the proposed performance motive, then test whether it outweighs the following risks:
++Security: direct device access bypasses normal permission checks, protected handles, process isolation and audit controls, exposing other customers' data and creating an escalation path.
++Integrity and consistency: raw disk writes can ignore file-system metadata, journaling, locks and cache-coherency rules, corrupting statements, transaction records or the whole volume.
++Reliability: an application defect could address the wrong block/device, hang the printer, leak privileged resources or crash system-level components.
++Concurrency: several banking sessions could issue conflicting device operations without OS scheduling, locking, queuing and arbitration.
++Portability and maintainability: the application becomes tied to a particular disk, controller and printer protocol instead of stable OS interfaces and drivers.
++Performance reality: any saved call overhead may be outweighed by lost caching, buffering, DMA, disk scheduling and printer spooling; the proposal also moves complex driver logic into the banking application.
++Course anchors: Week 1 slides 41, 43, 49 and 59-60. External verification: Microsoft Windows security model and I/O-manager guidance.
++1.3 CIO decision and justification (6 marks)
++Decision checkpoint: state an unambiguous rejection of direct hardware access in 1.3.1, then use 1.3.2 to justify the decision through the OS trust boundary.
++System calls are the controlled gateway from user mode into privileged kernel services.
++They enforce protection, validate requests, coordinate shared resources, expose stable interfaces and return defined errors.
++In a regulated banking environment, confidentiality, correctness, auditability and recoverability outweigh a speculative micro-optimisation.
++If performance is inadequate, optimise within supported mechanisms: profiling, asynchronous I/O, caching, batching, storage upgrades or approved driver/platform changes.
++Question 2 - Multithreaded ShopFast web server (25 marks)
++2.1 Single-threaded performance and blocking (6 marks)
++2.1a: explain serial service - one request must complete before the next starts. During Black Friday, arrival rate exceeds service rate, the waiting queue grows, latency rises, requests time out and the four-core machine remains underused.
++2.1b: define blocking as a thread being unable to progress while waiting for I/O or another event. A database lookup, payment API call or network write can therefore stop the only server thread, preventing unrelated customers from being served.
++Keep throughput and responsiveness distinct: throughput is completed requests per unit time; responsiveness is how quickly an individual customer receives progress or a response.
++Course anchors: Week 2 slides 20-21 and 36 for blocking; slides 44-46 for threads, responsiveness and multicore execution.
++2.2 Three scenario-specific benefits (6 marks)
++Use exactly three benefits and pair every benefit with a ShopFast consequence:
++Responsiveness/concurrency: while one request waits for a database, payment gateway or network operation, other worker threads can continue serving product and cart requests, reducing timeouts.
++Economy/resource sharing: threads share the server process's code, configuration, caches and address space, with lower creation/context-switch overhead than separate processes.
++Scalability/parallelism: runnable request handlers can execute on different cores of the quad-core server, increasing throughput during peaks when work and shared-resource contention are properly managed.
++Course anchor: Week 2 slide 46 lists responsiveness, resource sharing, economy and scalability.
++2.3 Task parallelism versus data parallelism (6 marks)
++Data parallelism: partition a dataset across cores and apply the same operation to each subset.
++Task parallelism: distribute different tasks across cores; tasks may perform different operations on the same or different data.
++Primary classification for this scenario: task parallelism. Separate request tasks - browsing, cart updates and payments - can run at the same time and can follow different code paths.
++Two reasons to develop: requests are independent units belonging to different customers, and the handlers can execute concurrently across four cores even when their operations/data differ.
++Nuance: repeated instances of the same handler over many customer records resemble data parallelism, but the scenario's overall web-server architecture is best justified as task parallelism.
++Course anchor: Week 2 slide 47.
++2.4 Thread pool and task queue (7 marks)
++2.4a: define a thread pool as a managed collection of reusable worker threads created ahead of, or independently from, individual requests.
++2.4b: explain why pooling is preferred - it avoids repeated creation/destruction overhead, bounds the number of active threads, reduces scheduler/memory pressure and prevents a traffic spike from creating unlimited threads.
++2.4c: describe the task queue as the waiting area between request acceptance and execution. Incoming requests become tasks; an available worker removes a task, processes it and returns to the pool.
++Queue role to connect to ShopFast: absorb short bursts, enforce ordering or priority, provide backpressure through bounded capacity, and expose overload when both workers and queue are saturated.
++Quad-core nuance: do not claim that exactly four workers is always optimal. CPU-bound work may be close to core count, while I/O-bound requests may benefit from more workers; the pool must still be bounded and measured.
++Course anchor: Week 2 slide 54. External verification: Oracle Java ThreadPoolExecutor documents pooled workers, bounded resource management and the work queue.
++Q1-Q2 self-review checklist
++Every sub-question is visibly labelled and answered in proportion to its marks.
++Every technical definition is followed by application to the named scenario.
++The final prose distinguishes an OS service, a system call and a device driver.
++The final prose does not promise that more threads always improve performance; it acknowledges bounded resources and contention.
++All wording has been rewritten in your own voice, with your own transitions and examples.
++In-text citations correspond to entries in the working reference list.
++Working reference list
++Eduvos. 2026a. ITOPA3-T11 Week 0 & 1 Lessons 1-4. Internal course slides.
++Eduvos. 2026b. ITOPA3-T11 Week 2 Lessons 5-7. Internal course slides.
++The Open Group. 2024. POSIX.1-2024 System Interfaces: open, read and close. Available at: https://pubs.opengroup.org/onlinepubs/9799919799/idx/functions.html
++Microsoft. 2025. Windows security model for driver developers. Available at: https://learn.microsoft.com/en-us/windows-hardware/drivers/driversecurity/windows-security-model
++Microsoft. 2025. User mode and kernel mode. Available at: https://learn.microsoft.com/en-us/windows-hardware/drivers/gettingstarted/user-mode-and-kernel-mode
++Oracle. 2025. ThreadPoolExecutor, Java SE 24 API. Available at: https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/concurrent/ThreadPoolExecutor.html
++Questions 3 and 4 - next work block
++Question 3 is supported by the supplied Week 3 deck (deadlock system model, resource-allocation graphs, prevention and avoidance). Question 4 requires the assignment diagram plus Week 5-6 file-management/cache material, which has not yet been supplied.
+ AI Evidence Section
+-[AI Code 1 – 4 may necessitate evidence submission as specified in your assessment instruction, this section is reserved for evidences where relevant, please delete if not applicable.]
++Prompt record 1
++"If you go to my downloads on my macbook, there is a file title ITOPA practical, its recent, extract it here please and go through it and let me know what it needs me to do."
++Action: located and copied the ITOPA assignment brief, extracted its eight pages, and summarised the questions, marks and submission rules.
++Prompt record 2
++"Its due Friday night, so lets plan and get it done."
++Action: created a mark-weighted schedule and authorship workflow around the Friday 23:59 deadline.
++Prompt record 3
++"mowbray, eduv4948467, Bongani Mahlangu, use these files for now" with three Eduvos ITOPA slide decks supplied.
++Action: inspected the supplied Week 0-3 decks, mapped exact slides to Questions 1 and 2, checked gaps against official POSIX, Microsoft and Oracle documentation, and produced a structured working framework rather than final submission prose.
+ AI Disclosure Appendix
+ AI tool used
+ Purpose / how it was used
+ How I verified or adapted the output
+-e.g. ChatGPT 4o
+-e.g. Brainstormed initial argument outline
+-e.g. Cross-checked with three peer-reviewed sources; fully rewritten in own words
+-e.g. Claude Opus 4.7
+-e.g. Brainstormed initial argument outline
+-e.g. Cross-checked with three peer-reviewed sources; fully rewritten in own words
+-e.g. Grok 4
+-e.g. Brainstormed initial argument outline
+-e.g. Cross-checked with three peer-reviewed sources; fully rewritten in own words
++OpenAI Codex (GPT-5.6)
++Located and interpreted the brief; analysed Week 0-3 slides; developed a Q1-Q2 research and writing framework; checked technical claims; formatted the working document.
++Mapped every point to the supplied Eduvos slides and official POSIX, Microsoft and Oracle documentation. Final assessed wording, examples and reasoning must be rewritten and checked by the student.
+ Declaration:
+ I/we declare that this assessment is my/our own original work, except for source material explicitly acknowledged. I/we confirm that any use of Artificial Intelligence (AI) tools has been applied only as permitted by the assessment instructions and has been fully disclosed where required. 
+ I/we understand that I/we remain responsible for the accuracy, originality, and academic quality of this submission. I/we am/are aware of the institution’s policies on academic integrity and the requirements relating to the responsible use of AI in assessments.

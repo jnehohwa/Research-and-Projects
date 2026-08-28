@@ -1,0 +1,463 @@
+                                             Assignment
+
+
+Site:       Eduvos LMS                                            Printed by:   Joshua Nehohwa
+Course:     Operating Systems Assessments                         Date:         Wednesday, 26 August 2026, 6:01 PM
+Book:       Assignment
+
+
+
+                                            Table of contents
+
+1. Assignment
+2. Instructions to Students
+3. Section A
+4. Terms of AI use for this Assessment
+        4.1. Question 1
+        4.2. Question 2
+        4.3. Question 3
+        4.4. Question 4
+        4.5. How AI use A!ects Marking
+
+
+
+
+Assignment
+
+ Faculty:                                            Information Technology
+
+ Module Code:                                        ITOPA3-33
+
+ Module Name:                                        Operating Systems
+
+ Content Writer:                                     Claude Nawej
+
+ Internal Moderation:                                Community of Practice
+
+ Copy Editor:                                        Kyle Keens
+
+ Total Marks:                                        100
+ Submission Week:                                                                Week 6
+
+
+
+This module is presented on NQF level 7.
+
+5% will be deducted from the student’s assignment mark for each calendar day the assignment is submitted late, up to a
+maximum of three calendar days. The penalty will be based on the o"cial campus submission date.
+
+Assignments submitted later than three calendar days after the deadline or not submitted will get 0%. [1]
+
+This is an individual assignment
+
+This assignment contributes 40% towards the final mark.
+
+[1] Under no circumstances will assignments be accepted for marking after the assignments of other students have been marked and returned to the students.
+
+
+
+
+Instructions to Students
+
+  1. Please ensure that you use the Assignment Template when preparing your submission (where applicable).
+  2. Please ensure that your answer file (where applicable) is named as follows before submission: Module Code –
+     Assessment Type – Campus Name – Student Number.
+  3. Remember to keep a copy of all submitted assignments.
+  4. All work must be typed.
+  5. Please note that you will be evaluated on your writing skills in all your assignments.
+  6. All work must be submitted through Turnitin. The full originality report will be automatically generated and available
+      for the lecturer to assess. Negative marking will be applied if you are found guilty of plagiarism, poor writing skills, or if
+      you have applied incorrect or insu"cient referencing. (See the "instructions to students" book activity before this
+     activity where the application of negative marking is explained.)
+  7. You are not allowed to o!er your work for sale or to purchase the work of other students. This includes the use of
+      professional assignment writers and websites, such as Essay Box. You are also not allowed to make use of artificial
+      intelligence tools, such as ChatGPT, to create content and submit it as your own work. If this should happen, Eduvos
+      reserves the right not to accept future submissions from you.
+
+
+
+
+Section A
+
+Learning Objective
+
+Evaluate an OS with relation to management systems based on policies and algorithms.
+
+Develop an understanding to model business and other non-software systems.
+
+Investigate alternatives designs of OS.
+
+Analyze and validate the architectural design software.
+
+Assignment Topic:
+
+Operating Systems
+
+Scope
+
+Week 1 - 6
+
+Technical Aspects
+
+NA
+These restrictions apply only where the activity forms part of the published assessment criteria. Assessment-specific
+instructions take precedence where they expressly permit or provide a tool, dataset, configuration, model, code component
+or other output. Please refer to the below and apply as appropriate.
+
+
+
+             See Generally Prohibited Activities
+
+
+4.1. Discipline-specific Prohibited Activities
+Please ensure that you consult the prohibited activity list that is specific to this module's discipline from the four discipline
+options below.
+
+
+
+             4.1.1. Software Engineering
+
+
+
+             4.1.2. Network Security Engineering
+
+
+
+             4.1.3. Data Science
+
+
+
+             4.1.4. Robotics
+
+
+
+
+ Question 1                                                                                                     20 Marks
+
+Study the scenario and complete the question(s) that follow(s):
+
+
+
+                 The Reserve National Bank operates a large online banking system that processes
+
+                 thousands of customer transactions every day. Customer account information, transaction
+                 histories, loan records, and audit logs are stored on the bank's secure servers.
+
+
+                 When a customer logs into online banking and requests a bank statement, the banking
+
+                 application must perform several tasks such as locate the customer's statement file stored
+                 on the hard drive, manage the file, display the information to the customer and close the file
+
+                 after the operation is completed.
+
+
+                 Under normal circumstances, these operations are performed through basic Operating
+                 System Calls. These system calls allow the operating system to manage access to files,
+
+                 printers, memory, and other hardware resources securely.
+
+
+                 However, a software developer proposes modifying the banking application so that it
+                 bypasses the operating system entirely and directly accesses the hard drive and printer
+
+                 hardware without using operating system system calls.
+
+
+                 The developer argues that this approach may improve performance because the application
+                 would communicate directly with the hardware devices. The bank's Chief Information
+
+                 O"cer (CIO) is concerned that bypassing the operating system could introduce serious
+
+                 security, reliability, and operational risks.
+                                                                                        Source: Nawej, MC (2026)
+
+
+
+
+1.1 Discuss the basic Operating System Calls used for file management and outline their importance when a customer
+requests a bank statement.
+
+                                                                                                                     (8 Marks)
+
+
+
+
+1.2 Critically analyse the consequences of allowing the banking application to directly access the hard drive and printer
+without using operating system system calls.
+
+                                                                                                                     (6 Marks)
+
+1.3.1 As the Chief Information O"cer (CIO), would you approve the developer's proposal?
+
+                                                                                                                      (2 mark)
+
+1.3.2 Justify your decision with reference to the role of operating system system calls in modern computing environments.
+
+                                                                                                                     (4 marks)
+
+
+End of Question 1
+
+
+
+
+ Question 2                                                                                                      25 Marks
+
+Study the scenario and complete the question(s) that follow(s):
+
+
+
+                    A rapidly growing e-commerce company, ShopFast Ltd, operates a web server that handles
+
+                    thousands of customer requests per second during peak shopping hours. The server
+                    currently runs as a single-threaded application, meaning each incoming HTTP request
+
+                    (browsing products, adding to cart, processing payments) is handled one at a time. During a
+
+                    recent Black Friday sale, the server became unresponsive — customers experienced
+                    timeouts, abandoned carts, and the company lost significant revenue.
+
+
+                    The engineering team has been tasked with redesigning the server as a multithreaded web
+
+                    server. Each incoming client request must be handled by a separate thread, allowing the
+                    server to serve multiple customers simultaneously. The server runs on a quad-core (4-core)
+
+                    machine.
+
+
+                    The development team must also decide whether the new architecture exhibits task
+                    parallelism or data parallelism, and justify their choice before implementation begins.
+
+
+
+
+                    Source: (Nawej, 2026)
+2.1a) Explain why the single-threaded web server performed poorly under peak load.
+
+                                                                                                                      (3 marks)
+
+2.1b) In your answer, discuss the concept of blocking and how it prevents the server from serving multiple clients.
+
+                                                                                                                      (3 marks)
+
+2.2a) Describe THREE specific benefits that a multithreaded solution would provide to ShopFast Ltd's web server compared
+to the single-threaded design.
+
+                                                                                                                      (3 marks)
+
+2.2b) For each benefit, relate it directly to the e-commerce scenario described above.
+
+                                                                                                                      (3 marks)
+
+2.3a) Distinguish between task parallelism and data parallelism.
+
+                                                                                                                      (3 Marks)
+
+2.3b) Based on the ShopFast Ltd scenario, state which type the multithreaded web server exhibits and justify your answer
+with at least TWO reasons.
+
+                                                                                                                      (3 Marks)
+
+
+
+2.4a) Explain what a thread pool is.
+
+                                                                                                                      (2 marks)
+
+2.4b) Why is it preferred over per-request thread creation in a high-tra"c web server
+
+                                                                                                                      (2 marks)
+
+2.4c) Describe the role of the task queue within the thread pool architecture.
+
+                                                                                                                      (3 marks)
+
+
+End of Question 2
+
+
+
+
+ Question 3                                                                                                 20 Marks
+
+Study the scenario and complete the question(s) that follow(s):
+
+
+
+                    A manufacturing company uses an automated production system consisting of four
+                    processes:
+
+
+                         P0 – Material Loading
+
+                         P1 – Quality Inspection
+
+                         P2 – Product Assembly
+                         P3 – Packaging
+
+
+                    The processes compete for six resources:
+
+
+                         A = Conveyor Belt
+                         B = Robotic Arm
+                         C = Vision Sensor
+
+                         D = Packaging Machine
+
+                         E = Assembly Station (2 instances)
+                         F = Inspection Scanner
+
+
+                    The following code is executed continuously.
+
+
+
+
+                    void P0()                void P1()             void P2()               void P3()
+                    {                        {                     {                       {
+
+                    while(true){             while(true){          while(true){            while(true){
+
+                    get(A);                  get(C);               get(F);                     get(D);
+                    get(B);                  get(E);               get(A);                     get(C);
+
+                    get(F);                  get(D);
+                                                                   // critical region          // critical region
+
+                    // critical region       // critical region    // use F,A                  // use D,C
+
+                    // use A,B,F             // use C,E,D
+                                                                   release(F);                 release(D);
+
+                    release(A);              release(C);           release(A);                 release(C);
+                    release(B);              release(E);           }                       }
+
+                    release(F);              release(D);           }                       }
+
+                    }                        }
+                    }                        }
+
+
+
+
+                    Resource E has 2 instances while all other resources have 1 instance
+
+
+
+
+3.1 Suppose the processes are executed line-by-line from P0 to P3. Using a Resource Allocation Graph, determine whether a
+deadlock can occur.
+
+                                                                                                                       (10 Marks)
+
+3.2 Modify the order of resource requests to eliminate the possibility of deadlock.
+
+                                                                                                                        (5 Marks)
+
+3.3 Explain whether deadlock prevention or deadlock avoidance would be more suitable for this manufacturing system.
+
+                                                                                                                        (5 Marks)
+
+
+End of Question 3
+
+
+
+
+ Question 4                                                                                                         35 Marks
+Study the scenario and complete the question(s) that follow(s):
+
+
+
+                File Management
+
+
+
+
+                A company stores its employee records on a computer system. The system uses a
+
+                hierarchical file system structure as shown below:
+
+
+
+
+4.1 Give three advantages of organizing files into directories.
+
+                                                                                                                 (3 Marks)
+
+4.2 Write the full path to Antivirus.exe and write a command prompt line that can be used to run the Antivirus.exe by
+considering the full path.
+
+                                                                                                                 (4 Marks)
+
+4.3 An administrator performs the following actions:
+
+     Copies Policies.pdf to the HR directory.
+     Deletes JanBackup.zip.
+     Renames Expenses.xlsx to Expenses_2026.xlsx.
+What will be the content of the HR and Public directory?
+
+                                                                                                                       (4 Marks)
+
+4.4 Some systems automatically delete all user files when a user logs o" or a job terminates, unless the user explicitly
+requests that they be kept. Other systems keep all files unless the user explicitly deletes them. Discuss the relative merits of
+each approach.
+
+                                                                                                                       (8 Marks)
+
+4.5.a Why do some systems keep track of the type of a file, while still others leave it to the user and others simply do not
+implement multiple file types? (4 Marks)
+
+b. Which system is “better”?
+
+                                                                                                                       (4 Marks)
+
+4.6a How do caches help improve performance?
+
+                                                                                                                       (4 Marks)
+
+b. Why do systems not use more or larger caches if they are so useful?
+
+                                                                                                                       (4 Marks)
+
+
+End of Question 4
+
+
+
+
+How AI use Affects Marking
+ Finding                              Outcome
+
+ No AI used and accurately
+                                      Your lecturer will mark according to the marking guide.
+ declared
+
+
+ Permitted AI use accurately
+                                      Your lecturer will mark according to the marking guide.
+ declared
+
+
+ AI-generated in identifiable         Your lecturer will mark authentic work and will not award marks for the a!ected
+ assessed component                   component that is identified to be AI-generated.
+
+
+ AI-generated in dependent            Your lecturer will evaluate each criterion in isolation and will not award marks for
+ criteria may be a!ected              a!ected criteria that are AI-generated.
+
+
+ Technically correct work that        Your lecturer will complete the review before finalising the mark, and will not award
+ raises authenticity concerns*        marks for a!ected criteria that are AI-generated.
+
+
+ Serious authenticity concerns        Your lecturer may request a formal discussion with you, and depending on the
+ exist*                               outcome may escalate a case for formal academic-integrity hearing.
+
+
+
+*See General Prohibited Activity list under Terms of AI use for this Assessment
+

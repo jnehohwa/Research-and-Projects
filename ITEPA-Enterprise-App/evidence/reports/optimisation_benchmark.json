@@ -1,0 +1,7 @@
+{
+  "dataset_size": 10000,
+  "repetitions": 2000,
+  "list_seconds": 0.249514,
+  "set_seconds": 5.3e-05,
+  "improvement_percent": 99.98
+}

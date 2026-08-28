@@ -1,0 +1,31 @@
+EDUCORE ENTERPRISE APPLICATION DEMONSTRATION
+========================================================
+Domain: Thabo Mokoena | Enterprise Python Development | Concurrency Practical
+Singleton: same instance = True; id = 4423992384
+Factory: academic  -> priority medium
+Factory: technical -> priority high
+Factory: billing   -> priority high
+Factory: general   -> priority low
+Strategy weighted average: 76.9
+Strategy best attempt: 81
+Strategy pass/fail: True
+Registration: L001 -> rejected_duplicate
+Registration: L002 -> rejected_capacity
+Registration: L003 -> rejected_capacity
+Registration: L004 -> rejected_capacity
+Registration: L005 -> rejected_capacity
+Registration: L006 -> rejected_capacity
+Registration: L007 -> confirmed
+Registration: L008 -> confirmed
+Registration: L009 -> confirmed
+Registration: L010 -> confirmed
+Registration: L011 -> confirmed
+Registration: L012 -> confirmed
+Registration: L013 -> confirmed
+Registration: L014 -> confirmed
+Registration: L015 -> confirmed
+Registration: L001 -> confirmed
+Registration summary: {"confirmed": 10, "rejected_capacity": 5, "rejected_duplicate": 1, "rejected_invalid": 0}
+Integrity: confirmed=10 capacity=10
+Bugzot report: {"average_duration_ms": 0.1341, "events_by_type": {"course_capacity_violation": 5, "duplicate_registration": 1, "registration_success": 10}, "failed_transactions": 6, "maximum_duration_ms": 0.3926, "minimum_duration_ms": 0.0062, "outcomes": {"confirmed": 10, "rejected_capacity": 5, "rejected_duplicate": 1}, "p95_duration_ms": 0.3926, "success_rate_percent": 62.5, "successful_transactions": 10, "throughput_transactions_per_second": 6073.03, "total_events": 16}
+Optimisation benchmark: {"dataset_size": 10000, "improvement_percent": 99.98, "list_seconds": 0.24901, "repetitions": 2000, "set_seconds": 5.7e-05}

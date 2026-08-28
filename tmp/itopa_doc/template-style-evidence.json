@@ -1,0 +1,168 @@
+{
+  "input": "/Users/joshuanehohwa/Downloads/Eduvos Assessment Template.docx",
+  "fonts_by_char_count": {},
+  "direct_run_formatting_runs": 50,
+  "direct_paragraph_formatting_paragraphs": 142,
+  "heading_like_paragraphs_not_heading_style": [
+    {
+      "para_index": 2,
+      "text": "Academic Details",
+      "style": "Body Text"
+    },
+    {
+      "para_index": 3,
+      "text": "Assessment Details",
+      "style": "Body Text"
+    },
+    {
+      "para_index": 4,
+      "text": "Student Details (Group, if applicable)",
+      "style": "Body Text"
+    },
+    {
+      "para_index": 6,
+      "text": "Student Details (Individual, if applicable)",
+      "style": "Body Text"
+    },
+    {
+      "para_index": 7,
+      "text": "Academic Integrity",
+      "style": "Body Text"
+    },
+    {
+      "para_index": 9,
+      "text": "Lecturer Use Only",
+      "style": "Body Text"
+    },
+    {
+      "para_index": 64,
+      "text": "#",
+      "style": "Body Text"
+    },
+    {
+      "para_index": 65,
+      "text": "Full Name",
+      "style": "Body Text"
+    },
+    {
+      "para_index": 66,
+      "text": "Student Number",
+      "style": "Body Text"
+    },
+    {
+      "para_index": 67,
+      "text": "Contact Number",
+      "style": "Body Text"
+    },
+    {
+      "para_index": 68,
+      "text": "% Participation",
+      "style": "Body Text"
+    },
+    {
+      "para_index": 69,
+      "text": "Signature",
+      "style": "Body Text"
+    },
+    {
+      "para_index": 70,
+      "text": "1",
+      "style": "Body Text"
+    },
+    {
+      "para_index": 76,
+      "text": "2",
+      "style": "Body Text"
+    },
+    {
+      "para_index": 82,
+      "text": "3",
+      "style": "Body Text"
+    },
+    {
+      "para_index": 88,
+      "text": "4",
+      "style": "Body Text"
+    },
+    {
+      "para_index": 94,
+      "text": "5",
+      "style": "Body Text"
+    },
+    {
+      "para_index": 100,
+      "text": "6",
+      "style": "Body Text"
+    },
+    {
+      "para_index": 111,
+      "text": "Yes",
+      "style": "Body Text"
+    },
+    {
+      "para_index": 112,
+      "text": "No",
+      "style": "Body Text"
+    }
+  ],
+  "examples": {
+    "direct_run_formatting": [
+      {
+        "para_index": 1,
+        "run_text": "Eduvos Assessment Coversheet",
+        "style": "Heading 1"
+      },
+      {
+        "para_index": 2,
+        "run_text": "Academic Details",
+        "style": "Body Text"
+      },
+      {
+        "para_index": 3,
+        "run_text": "Assessment Details",
+        "style": "Body Text"
+      },
+      {
+        "para_index": 4,
+        "run_text": "Student Details (Group, if applicable)",
+        "style": "Body Text"
+      },
+      {
+        "para_index": 6,
+        "run_text": "Student Details (Individual, if applicable)",
+        "style": "Body Text"
+      }
+    ],
+    "direct_paragraph_formatting": [
+      {
+        "para_index": 2,
+        "text": "Academic Details",
+        "style": "Body Text"
+      },
+      {
+        "para_index": 3,
+        "text": "Assessment Details",
+        "style": "Body Text"
+      },
+      {
+        "para_index": 4,
+        "text": "Student Details (Group, if applicable)",
+        "style": "Body Text"
+      },
+      {
+        "para_index": 6,
+        "text": "Student Details (Individual, if applicable)",
+        "style": "Body Text"
+      },
+      {
+        "para_index": 7,
+        "text": "Academic Integrity",
+        "style": "Body Text"
+      }
+    ]
+  },
+  "notes": [
+    "Direct formatting is not always wrong, but it often causes inconsistent output when templates change.",
+    "Heading-like paragraphs not using Heading styles can break TOC and accessibility."
+  ]
+}

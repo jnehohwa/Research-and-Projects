@@ -1,0 +1,28 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.13.5, pytest-9.1.1, pluggy-1.6.0
+rootdir: /Users/joshuanehohwa/Documents/Research and Projects/ITEPA-Enterprise-App
+configfile: pyproject.toml
+testpaths: tests
+plugins: cov-7.1.0
+collected 32 items
+
+tests/test_benchmark.py .                                                [  3%]
+tests/test_bugzot.py ...                                                 [ 12%]
+tests/test_domain.py ............                                        [ 50%]
+tests/test_patterns.py ..........                                        [ 81%]
+tests/test_registration.py ......                                        [100%]
+
+================================ tests coverage ================================
+_______________ coverage: platform darwin, python 3.13.5-final-0 _______________
+
+Name                          Stmts   Miss  Cover   Missing
+-----------------------------------------------------------
+src/educore/__init__.py           4      0   100%
+src/educore/benchmark.py         26      1    96%   44
+src/educore/bugzot.py            75     16    79%   32-34, 70-72, 108, 130-138
+src/educore/domain.py           100      3    97%   49, 106, 111
+src/educore/patterns.py          59      4    93%   72, 84, 86, 103
+src/educore/registration.py      79      2    97%   53, 128
+-----------------------------------------------------------
+TOTAL                           343     26    92%
+============================== 32 passed in 0.12s ==============================

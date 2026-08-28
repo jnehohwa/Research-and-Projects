@@ -1,0 +1,28 @@
+Wed Aug 26 23:56:22 2026    /Users/joshuanehohwa/Documents/Research and Projects/ITEPA-Enterprise-App/evidence/profiling/registration_profile.prof
+
+         46223 function calls (44301 primitive calls) in 0.305 seconds
+
+   Ordered by: cumulative time
+   List reduced from 883 to 18 due to restriction <18>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+     56/1    0.003    0.000    0.305    0.305 {built-in method builtins.exec}
+        1    0.000    0.000    0.305    0.305 <frozen runpy>:201(run_module)
+        1    0.000    0.000    0.270    0.270 <frozen runpy>:65(_run_code)
+        1    0.000    0.000    0.270    0.270 demo.py:1(<module>)
+        1    0.000    0.000    0.267    0.267 demo.py:70(main)
+        1    0.000    0.000    0.262    0.262 demo.py:30(run_demo)
+        1    0.000    0.000    0.257    0.257 benchmark.py:43(benchmark_as_dict)
+        1    0.257    0.257    0.257    0.257 benchmark.py:18(run_lookup_benchmark)
+        6    0.000    0.000    0.049    0.008 __init__.py:1(<module>)
+     69/5    0.000    0.000    0.041    0.008 <frozen importlib._bootstrap>:1349(_find_and_load)
+     69/5    0.000    0.000    0.041    0.008 <frozen importlib._bootstrap>:1304(_find_and_load_unlocked)
+     61/5    0.000    0.000    0.041    0.008 <frozen importlib._bootstrap>:911(_load_unlocked)
+     42/5    0.000    0.000    0.041    0.008 <frozen importlib._bootstrap_external>:1020(exec_module)
+   148/11    0.000    0.000    0.040    0.004 <frozen importlib._bootstrap>:480(_call_with_frames_removed)
+        1    0.000    0.000    0.035    0.035 <frozen runpy>:105(_get_module_details)
+      4/2    0.000    0.000    0.035    0.017 {built-in method builtins.__import__}
+        1    0.000    0.000    0.019    0.019 bugzot.py:1(<module>)
+        1    0.000    0.000    0.010    0.010 registration.py:1(<module>)
+
+

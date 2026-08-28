@@ -1,0 +1,63 @@
+Eduvos Assessment Coversheet
+Academic Details
+Campus:
+Faculty:
+Module Code:
+Lecturer’s Name:
+Group (if applicable)
+Assessment Details
+Assessment Type:
+Assignment/Brief Number:
+Due Date/ Submission Date:
+Student Details (Group, if applicable)
+#
+Full Name
+Student Number
+Contact Number
+% Participation
+Signature
+1
+2
+3
+4
+5
+6
+Student Details (Individual, if applicable)
+Student Full Name:
+Student Number:
+Academic Integrity
+AI Disclosure Completed
+Yes
+No
+Declaration: 
+I declare that this assessment is my own original work except for source material explicitly acknowledged. I confirm that this work has not previously been submitted for assessments in any course. I acknowledge the institutional AI policy and confirm that AI tools have only been used as stipulated and documented in the AI Disclosure Appendix.
+Student Signature
+Date
+Lecturer Use Only
+Lecturer Comments:
+Marks Awarded (%):
+Lecturer Signature:
+Date:
+Assessment
+[This section is reserved for your assessment submission content]
+AI Evidence Section
+[AI Code 1 – 4 may necessitate evidence submission as specified in your assessment instruction, this section is reserved for evidences where relevant, please delete if not applicable.]
+AI Disclosure Appendix
+AI tool used
+Purpose / how it was used
+How I verified or adapted the output
+e.g. ChatGPT 4o
+e.g. Brainstormed initial argument outline
+e.g. Cross-checked with three peer-reviewed sources; fully rewritten in own words
+e.g. Claude Opus 4.7
+e.g. Brainstormed initial argument outline
+e.g. Cross-checked with three peer-reviewed sources; fully rewritten in own words
+e.g. Grok 4
+e.g. Brainstormed initial argument outline
+e.g. Cross-checked with three peer-reviewed sources; fully rewritten in own words
+Declaration:
+I/we declare that this assessment is my/our own original work, except for source material explicitly acknowledged. I/we confirm that any use of Artificial Intelligence (AI) tools has been applied only as permitted by the assessment instructions and has been fully disclosed where required. 
+I/we understand that I/we remain responsible for the accuracy, originality, and academic quality of this submission. I/we am/are aware of the institution’s policies on academic integrity and the requirements relating to the responsible use of AI in assessments.
+I/we acknowledge that failure to comply with these requirements, including undeclared or inappropriate AI use, may result in academic penalties or disciplinary procedures in accordance with institutional policy.
+Student Signature(s)
+Date

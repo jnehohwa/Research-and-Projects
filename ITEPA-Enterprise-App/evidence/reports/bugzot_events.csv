@@ -1,0 +1,17 @@
+event_type,severity,component,outcome,message,correlation_id,learner_id,course_id,duration_ms,timestamp
+registration_success,INFO,registration_service,confirmed,registration confirmed,TX-3BEE27FA7A,L003,PY701,0.1572,2026-08-26T21:56:22.705750+00:00
+registration_success,INFO,registration_service,confirmed,registration confirmed,TX-6C82963387,L009,PY701,0.022,2026-08-26T21:56:22.705810+00:00
+registration_success,INFO,registration_service,confirmed,registration confirmed,TX-E8D8EDA8B1,L010,PY701,0.0192,2026-08-26T21:56:22.705858+00:00
+registration_success,INFO,registration_service,confirmed,registration confirmed,TX-15436672C7,L011,PY701,0.0169,2026-08-26T21:56:22.705905+00:00
+registration_success,INFO,registration_service,confirmed,registration confirmed,TX-D2EEC8A70F,L012,PY701,0.0175,2026-08-26T21:56:22.705947+00:00
+registration_success,INFO,registration_service,confirmed,registration confirmed,TX-F6EE1DE8F3,L013,PY701,0.0165,2026-08-26T21:56:22.705989+00:00
+registration_success,INFO,registration_service,confirmed,registration confirmed,TX-A1E19CB47C,L014,PY701,0.0149,2026-08-26T21:56:22.706026+00:00
+registration_success,INFO,registration_service,confirmed,registration confirmed,TX-90E348A325,L015,PY701,0.0159,2026-08-26T21:56:22.706065+00:00
+registration_success,INFO,registration_service,confirmed,registration confirmed,TX-C201621473,L001,PY701,0.0152,2026-08-26T21:56:22.706103+00:00
+registration_success,INFO,registration_service,confirmed,registration confirmed,TX-53E1E6B9A8,L007,PY701,0.4434,2026-08-26T21:56:22.706159+00:00
+course_capacity_violation,WARNING,registration_service,rejected_capacity,course capacity reached,TX-E5FB380601,L006,PY701,0.5652,2026-08-26T21:56:22.706192+00:00
+course_capacity_violation,WARNING,registration_service,rejected_capacity,course capacity reached,TX-3ED1E3BBA0,L002,PY701,0.553,2026-08-26T21:56:22.706220+00:00
+course_capacity_violation,WARNING,registration_service,rejected_capacity,course capacity reached,TX-67691884E2,L005,PY701,0.5497,2026-08-26T21:56:22.706247+00:00
+course_capacity_violation,WARNING,registration_service,rejected_capacity,course capacity reached,TX-C8A3212455,L008,PY701,0.62,2026-08-26T21:56:22.706272+00:00
+duplicate_registration,WARNING,registration_service,rejected_duplicate,duplicate registration prevented,TX-E63379D193,L001,PY701,0.0067,2026-08-26T21:56:22.706307+00:00
+course_capacity_violation,WARNING,registration_service,rejected_capacity,course capacity reached,TX-C3C9FD96BC,L004,PY701,0.6481,2026-08-26T21:56:22.706333+00:00

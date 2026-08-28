@@ -1,0 +1,171 @@
+{
+  "input": "/Users/joshuanehohwa/Documents/Research and Projects/ITOPA Practical/ITOPA3-33 - Assignment - Mowbray - EDUV4948467 - Working Draft.docx",
+  "fonts_by_char_count": {
+    "Arial": 10860,
+    "Georgia": 46
+  },
+  "direct_run_formatting_runs": 126,
+  "direct_paragraph_formatting_paragraphs": 222,
+  "heading_like_paragraphs_not_heading_style": [
+    {
+      "para_index": 2,
+      "text": "Academic Details",
+      "style": "Body Text"
+    },
+    {
+      "para_index": 3,
+      "text": "Assessment Details",
+      "style": "Body Text"
+    },
+    {
+      "para_index": 4,
+      "text": "Student Details (Group, if applicable)",
+      "style": "Body Text"
+    },
+    {
+      "para_index": 6,
+      "text": "Student Details (Individual, if applicable)",
+      "style": "Body Text"
+    },
+    {
+      "para_index": 7,
+      "text": "Academic Integrity",
+      "style": "Body Text"
+    },
+    {
+      "para_index": 9,
+      "text": "Lecturer Use Only",
+      "style": "Body Text"
+    },
+    {
+      "para_index": 13,
+      "text": "Working response framework - Questions 1 and 2",
+      "style": "Body Text"
+    },
+    {
+      "para_index": 33,
+      "text": "Status and authorship note",
+      "style": "Normal"
+    },
+    {
+      "para_index": 36,
+      "text": "Question 1 - Operating-system system calls (20 marks)",
+      "style": "Normal"
+    },
+    {
+      "para_index": 37,
+      "text": "1.1 File-management calls and their importance (8 marks)",
+      "style": "Normal"
+    },
+    {
+      "para_index": 47,
+      "text": "1.2 Consequences of bypassing the OS (6 marks)",
+      "style": "Normal"
+    },
+    {
+      "para_index": 56,
+      "text": "1.3 CIO decision and justification (6 marks)",
+      "style": "Normal"
+    },
+    {
+      "para_index": 63,
+      "text": "Question 2 - Multithreaded ShopFast web server (25 marks)",
+      "style": "Normal"
+    },
+    {
+      "para_index": 64,
+      "text": "2.1 Single-threaded performance and blocking (6 marks)",
+      "style": "Normal"
+    },
+    {
+      "para_index": 69,
+      "text": "2.2 Three scenario-specific benefits (6 marks)",
+      "style": "Normal"
+    },
+    {
+      "para_index": 75,
+      "text": "2.3 Task parallelism versus data parallelism (6 marks)",
+      "style": "Normal"
+    },
+    {
+      "para_index": 82,
+      "text": "2.4 Thread pool and task queue (7 marks)",
+      "style": "Normal"
+    },
+    {
+      "para_index": 89,
+      "text": "Q1-Q2 self-review checklist",
+      "style": "Normal"
+    },
+    {
+      "para_index": 96,
+      "text": "Working reference list",
+      "style": "Normal"
+    },
+    {
+      "para_index": 103,
+      "text": "Questions 3 and 4 - next work block",
+      "style": "Normal"
+    }
+  ],
+  "examples": {
+    "direct_run_formatting": [
+      {
+        "para_index": 1,
+        "run_text": "Eduvos Assessment Coversheet",
+        "style": "Heading 1"
+      },
+      {
+        "para_index": 2,
+        "run_text": "Academic Details",
+        "style": "Body Text"
+      },
+      {
+        "para_index": 3,
+        "run_text": "Assessment Details",
+        "style": "Body Text"
+      },
+      {
+        "para_index": 4,
+        "run_text": "Student Details (Group, if applicable)",
+        "style": "Body Text"
+      },
+      {
+        "para_index": 6,
+        "run_text": "Student Details (Individual, if applicable)",
+        "style": "Body Text"
+      }
+    ],
+    "direct_paragraph_formatting": [
+      {
+        "para_index": 2,
+        "text": "Academic Details",
+        "style": "Body Text"
+      },
+      {
+        "para_index": 3,
+        "text": "Assessment Details",
+        "style": "Body Text"
+      },
+      {
+        "para_index": 4,
+        "text": "Student Details (Group, if applicable)",
+        "style": "Body Text"
+      },
+      {
+        "para_index": 6,
+        "text": "Student Details (Individual, if applicable)",
+        "style": "Body Text"
+      },
+      {
+        "para_index": 7,
+        "text": "Academic Integrity",
+        "style": "Body Text"
+      }
+    ]
+  },
+  "notes": [
+    "Direct formatting is not always wrong, but it often causes inconsistent output when templates change.",
+    "Heading-like paragraphs not using Heading styles can break TOC and accessibility."
+  ]
+}

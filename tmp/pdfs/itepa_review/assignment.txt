@@ -1,0 +1,590 @@
+                                               Practical Assignment
+
+
+Site:       Eduvos LMS                                                Printed by:   Joshua Nehohwa
+Course:     Enterprise Programming in Python Assessments              Date:         Wednesday, 26 August 2026, 5:56 PM
+Book:       Practical Assignment
+
+
+
+                                                      Table of contents
+
+1. Practical Assignment
+2. Instructions to Students
+3. Section A
+4. Terms of AI use for this Assessment
+        4.1. Assignment Overview
+        4.2. Deliverable 1
+        4.3. Deliverable 2
+        4.4. Deliverable 3
+        4.5. Deliverable 4
+        4.6. Deliverable 5
+        4.7. How AI use A!ects Marking
+
+
+
+
+Practical Assignment
+
+
+ Faculty:                    Information Technology
+
+ Module Code:                ITEPA3-33
+
+ Module Name:                Enterprise Programming in Python
+
+ Content Writer:             Thabiso Moyo
+
+ Internal Moderation:        Community of Practice
+
+ Copy Editor:                Mr Kyle Keens
+             See Generally Prohibited Activities
+
+
+4.1. Discipline-specific Prohibited Activities
+Please ensure that you consult the prohibited activity list that is specific to this module's discipline from the four discipline
+options below.
+
+
+
+             4.1.1. Software Engineering
+
+
+
+             4.1.2. Network Security Engineering
+
+
+
+             4.1.3. Data Science
+
+
+
+             4.1.4. Robotics
+
+
+
+
+1. Assignment Overview
+
+The rapid growth of digital learning, professional certification programmes and corporate skills development initiatives has
+transformed the education and training sector. Organisations now serve large numbers of learners across multiple locations
+while providing online enrolment, assessment services, learner support and operational reporting. As demand for these
+services continues to increase, organisations require enterprise applications that can process large volumes of transactions
+e"ciently, support multiple users simultaneously and remain maintainable as business requirements evolve.
+
+Many training providers continue to rely on ageing or monolithic systems that were originally designed for smaller user
+populations. As these systems expand, operational challenges begin to emerge. Registration processes become slower
+during peak enrolment periods, reporting functions consume increasing amounts of system resources, support requests
+accumulate faster than they can be processed and application maintenance becomes increasingly di"cult. In many cases,
+poor scalability, ine#ective concurrency management and tightly coupled system components result in reduced
+performance, limited flexibility and a poor user experience.
+
+The organisation in this scenario provides professional certification programmes, short learning programmes and corporate
+training courses to thousands of learners across South Africa. The organisation currently uses several disconnected systems
+to manage learner registrations, course enrolments, assessments, support requests and reporting activities. As learner
+numbers continue to grow, management has identified concerns relating to application performance, duplicated
+information, ine"cient workflows and the inability to scale individual components independently.
+
+Management has therefore commissioned the development of a Python-based enterprise application prototype that will
+serve as a centralised platform for managing learner information, registrations, assessments, support requests and
+operational reporting. The solution must demonstrate how enterprise programming principles can be applied to improve
+scalability, maintainability, performance and reliability within a real-world environment.
+
+The proposed system must support:
+
+     learner registration and management
+     course and assessment management
+     support ticket creation and tracking
+     concurrent registration processing
+     enterprise reporting and monitoring
+     performance optimisation
+     automated testing
+     application profiling
+     error logging and diagnostics
+     future migration to a microservices architecture
+You are required to design and develop a Python-based enterprise application prototype that demonstrates the practical
+application of enterprise programming concepts. Your solution must reflect sound architectural decisions, appropriate use
+of design patterns, e#ective concurrency management, scalable data modelling techniques and software quality practices
+commonly found in modern enterprise systems.
+
+Marks will be awarded for functionality, code quality, scalability considerations, testing, performance optimisation and
+overall solution design.
+
+
+
+
+ Deliverable 1                                                                                                20 Marks
+
+DELIVERABLE 1: 20 Marks
+
+In this deliverable, you are required to design and implement the foundational components of the enterprise application.
+Your solution should demonstrate how enterprise applications use object-oriented principles and design patterns to
+improve maintainability, flexibility and scalability. The components developed in this deliverable will form the basis of the
+remaining sections of the project.
+
+1.1 Domain Model Implementation (8 Marks)
+
+Design and implement the following classes:
+
+     Learner
+     Course
+     Registration
+     Assessment
+     SupportTicket
+
+Your implementation should demonstrate sound object-oriented design principles and appropriate relationships between
+the classes. The design must include suitable attributes, methods, validation and class interactions that reflect the
+requirements of a large-scale training and certification environment.
+
+The classes should support the management of learner information, course enrolments, assessment activities and support
+requests. You are encouraged to make reasonable assumptions where additional functionality may be required.
+
+Provide screenshots showing that objects can be created successfully and that interactions between the classes function
+correctly.
+
+
+
+
+Criteria                                     Marks
+
+Appropriate class design and structure       2
+
+Application of object-oriented principles    2
+
+Relationships between classes                2
+
+Validation and functionality                 1
+
+Evidence and screenshots                     1
+
+Total                                        8
+1.2 Design Pattern Implementation (12 Marks)
+
+Enterprise applications frequently use design patterns to improve maintainability, extensibility and code reuse. Implement
+the following design patterns within your application and demonstrate how they support enterprise application
+development.
+
+Implement a Singleton Pattern to manage application configuration settings and ensure that only one configuration instance
+exists throughout the application. Implement a Factory Pattern that creates di#erent support ticket types based on user
+requirements. Finally, implement a Strategy Pattern that supports di#erent approaches for calculating assessment results.
+
+For each design pattern, demonstrate how it has been incorporated into the application workflow and provide evidence that
+the implementation functions correctly. Briefly justify why each pattern is appropriate for the scenario and explain the
+benefits it provides to the application.
+
+Provide screenshots showing the successful execution of each design pattern.
+
+
+
+
+Criteria                                        Marks
+
+Correct implementation of Singleton Pattern     3
+
+Correct implementation of Factory Pattern       3
+
+Correct implementation of Strategy Pattern      3
+
+Justification and enterprise relevance          2
+
+Evidence and screenshots                        1
+
+Total                                           12
+
+
+
+
+Possible Output
+ Deliverable 2                                                                                              25 Marks
+
+DELIVERABLE 2: 25 Marks
+
+As the organisation continues to expand, the application must be capable of handling increasing numbers of learners and
+transactions without compromising performance or data integrity. In this deliverable, you are required to extend your
+application to support large-scale processing and concurrent operations that reflect real-world enterprise environments.
+
+
+
+2.1 Registration Processing Engine (8 Marks)
+
+Develop a registration processing engine that manages learner enrolments into courses. The registration engine should
+validate learner information, enforce business rules and maintain accurate registration records throughout the registration
+process. Your solution must prevent duplicate registrations, enforce course capacity limits and update registration statuses
+appropriately. The registration engine should also generate a summary showing the outcome of processed registrations,
+including successful and unsuccessful transactions.
+
+
+
+
+To demonstrate scalability, your application must be capable of processing at least 10 simulated registration requests.
+Provide screenshots showing the execution and results produced by the registration engine.
+
+
+
+Criteria                                     Marks
+
+Registration processing logic                2
+
+Validation and business rule enforcement     2
+
+Duplicate registration prevention            1
+
+Capacity management                          1
+
+Processing summary and output                1
+
+Evidence and screenshots                     1
+
+Total                                        8
+2.2 Scalable Data Modelling (5 Marks)
+
+Evaluate the data structures used within your application and justify why they are suitable for processing at least 10
+registration requests. Your discussion should compare at least two possible approaches and explain how your chosen
+implementation supports scalability, maintainability and performance.
+
+
+
+Marking Guidelines
+
+Criteria                                                              Marks
+
+Identification and discussion of data structures used within the
+                                                                      1
+application
+
+Comparison of at least two possible data modelling approaches         1
+
+Justification of the selected approach                                1
+
+Discussion of scalability, maintainability and performance
+                                                                      1
+considerations
+
+Application of discussion to the implemented solution                 1
+
+Total                                                                 5
+
+
+
+2.3 Concurrent Request Processing (12 Marks)
+
+During peak registration periods, large numbers of learners may attempt to register simultaneously. Implement concurrent
+processing using an appropriate Python concurrency mechanism such as threading, asyncio or concurrent.futures. Your
+solution should demonstrate the processing of multiple registration requests at the same time while protecting shared
+resources and maintaining data integrity. Appropriate measures should be implemented to prevent inconsistent
+registrations and concurrency-related errors. Provide evidence of successful execution together with a brief explanation of
+how concurrency risks were identified and managed within the application.
+
+
+
+
+Criteria                                      Marks
+
+Correct implementation of concurrency
+                                              4
+mechanism
+
+Processing of simultaneous requests           2
+
+Identification of concurrency risks           2
+
+Protection of shared resources and data
+                                              2
+integrity
+
+Evidence and explanation                      2
+
+Total                                         12
+
+
+Sample Output
+End of Question 3
+
+
+
+
+ Deliverable 3      20 Marks
+Enterprise applications require e#ective monitoring and diagnostic capabilities to support operational visibility,
+troubleshooting and continuous improvement. In this deliverable, you are required to develop a monitoring subsystem
+called Bugzot that records application events, monitors performance and assists in identifying opportunities for
+optimisation.
+
+
+
+
+3.1 Bugzot Monitoring Subsystem (8 Marks)
+
+Develop a monitoring subsystem called Bugzot that records important events occurring within the application. The
+subsystem should assist administrators in identifying operational issues and monitoring overall system behaviour.
+
+Your implementation should record validation failures, duplicate registration attempts, course capacity violations and other
+application errors generated during processing. Each recorded event should contain su"cient information to support
+troubleshooting and analysis.
+
+Provide screenshots demonstrating the successful operation of the monitoring subsystem and examples of recorded events.
+
+
+
+
+Criteria                                       Marks
+
+Design and implementation of Bugzot
+                                               2
+subsystem
+
+Logging of application events and errors       2
+
+Quality and usefulness of captured
+                                               2
+information
+
+Functionality and execution evidence           2
+
+Total                                          8
+
+
+
+
+3.2 Application Performance Monitoring (7 Marks)
+
+Extend the Bugzot subsystem so that it records application performance information. The monitoring solution should
+provide visibility into the behaviour of the registration engine and other major application components. Your
+implementation should track transaction activity, processing performance and operational statistics that would assist
+management in evaluating system e"ciency. Generate a performance report summarising the information collected by the
+monitoring subsystem.
+
+Provide screenshots of the generated performance information and reports.
+
+
+
+Criteria                         Marks
+
+Collection of performance
+                                 2
+metrics
+
+Monitoring of transaction
+                                 2
+activity
+
+Generation of performance
+                                 2
+reports
+
+Evidence and screenshots         1
+
+Total                            7
+3.3 Performance Improvement (5 Marks)
+
+Enterprise applications often experience performance bottlenecks as usage increases. Analyse your application and identify
+one area where performance can be improved.
+
+Explain the cause of the bottleneck, implement an improvement and compare the results before and after the optimisation.
+Support your discussion with evidence obtained from application output, monitoring information or performance
+measurements.
+
+
+
+
+Criteria                         Marks
+
+Identification of performance
+                                 1
+issue
+
+Analysis of root cause           1
+
+Implementation of improvement 2
+
+Evidence of improvement
+                                 1
+achieved
+
+Total                            5
+
+
+
+Sample Output
+
+
+
+
+End of Deliverable 3
+
+
+
+
+ Deliverable 4                                                                                            15 Marks
+DELIVERABLE 4: 15 marks
+
+4.1 User Interface Design and Evaluation
+
+Management has indicated that a user-friendly front-end interface is required to support future expansion of the
+application. Develop a wireframe, storyboard, mock-up, or other suitable interface design showing how users would interact
+with the system.
+
+Your design should demonstrate how learners and administrators would perform the following activities:
+
+     Learner registration
+     Course management
+     Support ticket creation
+     Report viewing
+
+In your answer
+
+  1. Develop a suitable interface design that clearly represents the screens, navigation options, and user interactions
+     required to support the activities listed above.
+  2. Briefly explain the design decisions used, including layout, navigation, usability, and validation considerations.
+  3. Evaluate your proposed design by discussing its strengths, identifying one limitation, and recommending an
+     improvement.
+
+Mark Allocation
+
+Criteria                                                                   Marks
+
+Completeness of interface design and inclusion of required functionality5
+
+Alignment of interface with application requirements                       3
+
+Explanation of design decisions (layout, navigation, validation, usability) 3
+
+Evaluation of strengths and user experience considerations                 2
+
+Identification of limitation and recommendation for improvement            2
+
+Total                                                                      15
+
+
+End of Deliverable 4
+
+
+
+
+DELIVERABLE 5: 20 Marks
+
+Enterprise applications must be tested thoroughly, monitored continuously and designed with future growth in mind. In this
+deliverable, you are required to demonstrate software quality practices and evaluate how the application could evolve into a
+microservices-based solution.
+
+5.1 Automated Testing (8 Marks)
+
+Develop automated tests for key components of your application using an appropriate Python testing framework such as
+unittest or pytest.
+
+Your tests should verify critical functionality within the application, including registration processing, business rule
+enforcement, assessment calculations and validation logic. The test suite should demonstrate that the application behaves
+as expected under normal operating conditions.
+
+Provide screenshots showing the successful execution of the automated tests.
+
+
+
+
+Criteria                              Marks
+Selection and use of testing          2
+framework
+
+Coverage of application functionality 3
+
+Quality of test cases                 2
+
+Evidence and screenshots              1
+
+Total                                 8
+
+
+
+
+5.2 Application Profiling (4 Marks)
+
+Use an appropriate Python profiling tool or technique to analyse the performance characteristics of your application.
+
+Present the results obtained from the profiling activity and discuss what the findings reveal about the application's
+behaviour. Identify any areas that may require further optimisation.
+
+Provide evidence of the profiling process and results.
+
+Criteria                                  Marks
+
+Use of profiling technique or tool        1
+
+Analysis of profiling results             2
+
+Identification of optimisation
+                                          1
+opportunities
+
+Total                                     4
+
+
+
+5.3 Microservices Readiness Assessment (8 Marks)
+
+Analyse your existing application and identify how it could be decomposed into separate services.
+
+Your proposal should:
+
+     identify candidate services
+     explain responsibilities
+     discuss service communication
+     explain testing and tracing requirements
+     identify services capable of operating independently
+
+Create a suitable architecture diagram to support your proposal.
+
+
+
+Criteria                                                               Marks
+
+Identification of suitable candidate microservices                     2
+
+Explanation of service responsibilities and boundaries                 2
+
+Discussion of service communication mechanisms                         1
+
+Discussion of testing, tracing and monitoring considerations           1
+
+Evaluation of independently executable services and associated
+                                                                       1
+benefits
+
+Architecture diagram and overall presentation                          1
+
+Total                                                                  8
+End of Deliverable 5
+
+
+
+
+How AI use Affects Marking
+ Finding                             Outcome
+
+ No AI used and accurately
+                                     Your lecturer will mark according to the marking guide.
+ declared
+
+
+ Permitted AI use accurately
+                                     Your lecturer will mark according to the marking guide.
+ declared
+
+
+ AI-generated in identifiable        Your lecturer will mark authentic work and will not award marks for the a!ected
+ assessed component                  component that is identified to be AI-generated.
+
+
+ AI-generated in dependent           Your lecturer will evaluate each criterion in isolation and will not award marks for
+ criteria may be a!ected             a!ected criteria that are AI-generated.
+
+
+ Technically correct work that       Your lecturer will complete the review before finalising the mark, and will not award
+ raises authenticity concerns*       marks for a!ected criteria that are AI-generated.
+
+
+ Serious authenticity concerns       Your lecturer may request a formal discussion with you, and depending on the
+ exist*                              outcome may escalate a case for formal academic-integrity hearing.
+
+
+
+*See General Prohibited Activity list under Terms of AI use for this Assessment
+
