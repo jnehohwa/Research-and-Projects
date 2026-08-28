@@ -45,11 +45,3 @@ python scripts/build_report.py
 - `demo.py`: complete assessment demonstration
 - `tests/`: 32 automated tests covering core behaviour and concurrency
 
-## Submission approach
-
-The implementation is developed incrementally against the ITEPA3-33 marking
-criteria. Evidence, profiling output, diagrams, and report material will be kept
-in dedicated folders so each claim can be reproduced.
-
-The `submission/` folder and final ZIP are generated only after the verification
-commands pass. Review `SUBMISSION_CHECKLIST.md` before uploading.
